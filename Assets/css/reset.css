@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Calibri;
+  font-family: var(--font-primary);
 }
 
 body {
@@ -11,12 +11,67 @@ body {
   background-color: #eee;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+ul {
+  list-style: none;
 }
 
 button {
+  cursor: pointer;
+  font-size: var(--font-size-body-sm);
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: var(--font-size-body);
+}
+
+h1 {
+  font-size: var(--font-size-heading);
+  font-weight: 500;
+}
+
+h2 {
+  font-size: var(--font-size-sub-heading);
+}
+
+p {
+  font-size: var(--font-size-body-sm);
+  line-height: 1.6;
+}
+
+i {
+  width: 22px;
+  text-align: center;
+}
+
+input,
+textarea,
+select {
+  padding: 5px;
+  border: 1px var(--clr-accent) solid;
   outline: none;
-  background-color: transparent;
+  width: 100%;
+  border-radius: 5px;
+  resize: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  border-color: var(--clr-primary);
+}
+
+th,
+td {
+  border: 1px solid var(--clr-accent);
+  padding: 10px;
+  text-align: left;
 }
