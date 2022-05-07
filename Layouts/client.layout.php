@@ -9,13 +9,16 @@
     <link rel="stylesheet" href="./Assets/css/helpers.css">
     <link rel="stylesheet" href="./Assets/css/variables.css">
     <link rel="stylesheet" href="./Assets/css/client/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>{{ title }}</title>
 </head>
 
 <body>
-    <h1>Header</h1>
-    {{ content }}
-    <h1>Footer</h1>
+    <?php
+    require "./Layouts/client/_header.php";
+    echo "{{ content }}";
+    require "./Layouts/client/_footer.php";
+    ?>
 </body>
 
 </html>
