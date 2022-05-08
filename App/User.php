@@ -35,7 +35,11 @@ class User extends Model
             if ($result->num_rows > 0) {
                 $user = mysqli_fetch_assoc($result);
                 $this->setAuth($user['id']);
-                header("location:./index.php");
+                if ($user['role'] != "admin") {
+                    header("location:./index.php");
+                } else {
+                    header("location:./admin.php");
+                }
             } else {
                 echo "User credentials not Matched";
             }

@@ -127,6 +127,11 @@
   background-color: var(--clr-white) !important;
 }
 
+.blog-item img {
+  max-width: 200px !important;
+  object-fit: cover;
+}
+
 .blog-details,
 .blog-title {
   max-height: 50px;

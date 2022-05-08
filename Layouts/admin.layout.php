@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./Assets/css/helpers.css">
     <link rel="stylesheet" href="./Assets/css/variables.css">
     <link rel="stylesheet" href="./Assets/css/admin/style.css">
-    <title>Document</title>
+    <title>Admin | {{ title }}</title>
 </head>
 
 <body>

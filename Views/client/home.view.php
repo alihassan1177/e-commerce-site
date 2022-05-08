@@ -1,3 +1,7 @@
+<?php
+$blogs = $data['blogs'];
+?>
+
 <section class="hero">
     <div class="container">
         <div class="hero__content flex align-center gap-4">
@@ -64,13 +68,17 @@
         </div>
         <div class="product-grid">
             <?php
-            for ($i = 0; $i < 4; $i++) {
+            $blogs_len = count($blogs);
+            for ($i = 0; $i < $blogs_len; $i++) {
+                $title = $blogs[$i]['title'];
+                $body = $blogs[$i]['body'];
+                $img = $blogs[$i]['img'];
                 echo (<<<HTML
                         <div class="product-item flex flex-column gap-2 blog-item">
-                            <img src="https://images.theconversation.com/files/344067/original/file-20200625-33538-v5k8ab.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop" alt="">
+                            <img src="$img" alt="">
                             <div class="flex flex-column gap-sm align-start">
-                                <strong class="blog-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, accusantium.</strong>
-                                <p class="blog-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora iusto quod maiores tempore recusandae a consequuntur magnam natus soluta, nobis corporis ipsum similique! Accusantium ut dicta libero iure repudiandae quae sunt facilis rerum quis perspiciatis!</p>
+                                <strong class="blog-title">$title</strong>
+                                <p class="blog-details">$body</p>
                             </div>
                             <a href="" class="btn-primary-outline text-center">Learn More</a>
                         </div>  
