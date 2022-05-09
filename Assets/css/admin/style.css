@@ -1,0 +1,5 @@
+.blog-details,
+.blog-title {
+  max-height: 50px;
+  overflow: hidden;
+}

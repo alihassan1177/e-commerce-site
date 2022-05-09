@@ -124,11 +124,12 @@
 .blog-item {
   max-height: 600px;
   overflow: hidden;
+  padding: 0 !important;
   background-color: var(--clr-white) !important;
 }
 
 .blog-item img {
-  max-width: 200px !important;
+  height: 200px;
   object-fit: cover;
 }
 

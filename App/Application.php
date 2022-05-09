@@ -7,9 +7,11 @@ require './App/User.php';
 require './App/Blog.php';
 require './App/Layout.php';
 require './App/Helpers.php';
+require './App/Config.php';
 
 class Application
 {
+    public $config;
     public $db;
     public $user;
     public $product;
@@ -19,6 +21,7 @@ class Application
 
     public function __construct()
     {
+        $this->config = new Config;
         $this->db = new Database;
         $this->product = new Product($this->db);
         $this->user = new User($this->db);

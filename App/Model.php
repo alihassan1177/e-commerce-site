@@ -21,6 +21,7 @@ class Model
         $val = implode(',', $value);
 
         return $this->db->query("INSERT INTO `{$table}`({$col}) VALUES ({$val});");
+        // echo ("INSERT INTO `{$table}`({$col}) VALUES ({$val});");
     }
 
     protected function getById(int $id)
