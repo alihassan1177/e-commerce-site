@@ -3,8 +3,6 @@
 class User extends Model
 {
 
-    public $currentUser = [];
-
     public function register(string $name, string $email, string $password)
     {
         $verified_email = filter_var($email, FILTER_VALIDATE_EMAIL);
@@ -18,7 +16,7 @@ class User extends Model
                     'email' => "'$email'",
                     'password' => "'$password'"
                 ];
-                $this->write("users", ["`username`", "`email`", "`password`"], $val);
+                $this->write("users", ["`name`", "`email`", "`password`"], $val);
                 echo "User Created Successfully";
             }
         } else {
@@ -34,6 +32,7 @@ class User extends Model
             $result = $this->db->query("SELECT * FROM `users` WHERE `email` = '{$email}' AND `password` = '{$password}';");
             if ($result->num_rows > 0) {
                 $user = mysqli_fetch_assoc($result);
+                $_SESSION['user'] = $user;
                 $this->setAuth($user['id']);
                 if ($user['role'] != "admin") {
                     header("location:./index.php");
@@ -62,7 +61,7 @@ class User extends Model
     public function getLoggedUser()
     {
         $user_id = $this->getAuth();
-        return $this->currentUser = $this->getById($user_id);
+        return  $this->getById($user_id);
     }
 
     public function getAuth()

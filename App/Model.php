@@ -24,8 +24,8 @@ class Model
         // echo ("INSERT INTO `{$table}`({$col}) VALUES ({$val});");
     }
 
-    protected function getById(int $id)
+    protected function getById(int $id, string $table = "users")
     {
-        return mysqli_fetch_all($this->db->query("SELECT * FROM `users` WHERE `id` = $id"), MYSQLI_ASSOC);
+        return mysqli_fetch_all($this->db->query("SELECT * FROM `{$table}` WHERE `id` = $id"), MYSQLI_ASSOC);
     }
 }

@@ -16,8 +16,9 @@ class Layout
         return ob_get_clean();
     }
 
-    public function getAdminLayout()
+    public function getAdminLayout(array $array = [])
     {
+        $data = $array;
         ob_start();
         include './Layouts/admin.layout.php';
         return ob_get_clean();

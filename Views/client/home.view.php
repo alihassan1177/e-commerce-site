@@ -70,7 +70,9 @@ $blogs = $data['blogs'];
             <?php
             $blogs_len = count($blogs);
             for ($i = 0; $i < $blogs_len; $i++) {
+                $post_id = $blogs[$i]['id'];
                 $title = $blogs[$i]['title'];
+                $slug = str_replace(" ", "-", strtolower($title));
                 $body = $blogs[$i]['body'];
                 $img = $blogs[$i]['img'];
                 echo (<<<HTML
@@ -80,12 +82,13 @@ $blogs = $data['blogs'];
                                 <strong class="blog-title">$title</strong>
                                 <p class="blog-details">$body</p>
                             </div>
-                            <a href="" class="btn-primary-outline text-center">Learn More</a>
+                            <a href="./post.php?post_name={$slug}&id={$post_id}" class="btn-primary-outline text-center">Learn More</a>
                         </div>  
                     HTML);
             }
             ?>
         </div>
+        <p class="text-center"><a href="./post.php" class="btn-primary-outline">View More</a></p>
     </div>
 </section>
 

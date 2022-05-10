@@ -15,9 +15,9 @@
 
 <body>
     <?php
-    require LAYOUTS . "/client/_header.php";
+    require  "./Layouts/client/_header.php";
     echo "{{ content }}";
-    require LAYOUTS . "/client/_footer.php";
+    require  "./Layouts/client/_footer.php";
     ?>
 </body>
 

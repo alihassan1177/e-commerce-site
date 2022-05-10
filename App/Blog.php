@@ -33,6 +33,6 @@ class Blog extends Model
 
     public function singlePost(int $id)
     {
-        return $this->getById($id);
+        return $this->getById($id, "blogs");
     }
 }
