@@ -22,6 +22,11 @@ class Product extends Model
         return $this->read('products');
     }
 
+    public function singleProduct(int $id)
+    {
+        return $this->getById($id, "products");
+    }
+
     public function getProductCategory(int $id)
     {
         return $this->getById($id, "categories");

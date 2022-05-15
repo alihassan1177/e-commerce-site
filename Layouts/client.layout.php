@@ -19,6 +19,8 @@
     echo "{{ content }}";
     require  "./Layouts/client/_footer.php";
     ?>
+
+
 </body>
 
 </html>

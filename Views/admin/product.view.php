@@ -9,7 +9,6 @@
                 <th>Price</th>
                 <th>Img</th>
                 <th>Category</th>
-                <th>Actions</th>
             </thead>
             <tbody>
                 <?php
@@ -34,12 +33,7 @@
                         <td><p class="blog-title">$$post_price</p></td>
                         <td><p class="blog-title">$post_img</p></td>
                         <td><p class="blog-title">$category_name</p></td>
-                        <td>
-                        <div class="flex align-center gap-1">
-                            <a target="_blank" href="./post.php?post_name={$post_title}&&id={$post_id}">View</a>
-                            <a href="./blog.php?id={$post_id}">Delete</a>
-                        </div>
-                        </td></tr>
+                        </tr>
                     html;
                 }
                 ?>

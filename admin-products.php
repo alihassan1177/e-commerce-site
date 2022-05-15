@@ -17,13 +17,6 @@ if (!$app->user->getAuth()) {
     }
 }
 
-print_r($_POST);
-
 if (isset($_POST['create'])) {
     $app->product->createProduct($_POST['title'], $_POST['body'], $_FILES['img'], $_POST['price'], $_POST['category_id']);
 }
-
-// if (isset($_GET['id']) && $_GET['id'] != null) {
-//     $app->blog->delete($_GET['id']);
-//     header("location:./blog.php");
-// }
