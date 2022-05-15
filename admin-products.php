@@ -17,9 +17,11 @@ if (!$app->user->getAuth()) {
     }
 }
 
-// if (isset($_POST['create-post'])) {
-//     $app->blog->createPost($_POST['title'], $_POST['body'], $_FILES['img']);
-// }
+print_r($_POST);
+
+if (isset($_POST['create'])) {
+    $app->product->createProduct($_POST['title'], $_POST['body'], $_FILES['img'], $_POST['price'], $_POST['category_id']);
+}
 
 // if (isset($_GET['id']) && $_GET['id'] != null) {
 //     $app->blog->delete($_GET['id']);
