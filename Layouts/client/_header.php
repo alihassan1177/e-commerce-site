@@ -4,7 +4,7 @@
     </a>
     <nav>
         <ul class="flex align-center gap-4">
-            <li><a href="">Home</a></li>
+            <li><a href="./index.php">Home</a></li>
             <li><a href="./products.php">Products</a></li>
             <li>
                 <div class="dropdown flex flex-column gap-2">
@@ -16,9 +16,9 @@
                     </ul>
                 </div>
             </li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="./post.php">Blog</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
 
             <?php
 

@@ -92,7 +92,7 @@ $blogs = $data['blogs'];
     </div>
 </section>
 
-<section class="about">
+<section id="about" class="about">
     <div class="container flex flex-column gap-4 align-center">
         <div class="flex flex-column align-center gap-1">
             <h2>Who We Are?</h2>

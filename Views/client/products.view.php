@@ -12,9 +12,17 @@
         </div>
         <div data-products class="product-grid">
             <?php
-            $products = $data['products'];
+            $posts = $data['products'];
             $Product = $data['productClass'];
-            foreach ($products as $product) {
+            foreach ($posts as $post) {
+                $post_id = $post['id'];
+                $post_title = $post['name'];
+                $post_img = $post['img'];
+                $post_price = $post['price'];
+                $post_body = $post['body'];
+                $post_category = $post['category_id'];
+                $product_category = $Product->getProductCategory($post_category);
+                $category_name = $product_category[0]['name'];
                 include "./Views/client/inc/_product-item.php";
             } ?>
         </div>

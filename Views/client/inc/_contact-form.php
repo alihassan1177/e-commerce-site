@@ -1,4 +1,4 @@
-<section class="contact">
+<section id="contact" class="contact">
     <div class="container flex flex-column gap-4 align-center">
         <div class="flex flex-column align-center gap-1">
             <h2>Contact Us</h2>
