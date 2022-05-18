@@ -16,11 +16,12 @@
 <body>
     <?php
     require  "./Layouts/client/_header.php";
+    require  "./Layouts/client/_cart-sidebar.php";
     echo "{{ content }}";
     require  "./Layouts/client/_footer.php";
     ?>
 
-
+    <script src="<?= JS ?>/client/cart.js"></script>
 </body>
 
 </html>

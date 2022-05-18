@@ -17,8 +17,7 @@
                 </div>
             </li>
             <li><a href="./post.php">Blog</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a class="cursor-pointer flex gap-1" data-cart-toggle>Cart <div style="color: white;" class="circle flex align-center justify-center"><?php echo $n = (isset($_SESSION['cart'])) ? count($_SESSION['cart']) : 0; ?></div> </a></li>
 
             <?php
 

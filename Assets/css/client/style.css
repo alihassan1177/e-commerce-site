@@ -1,6 +1,11 @@
 .header {
   padding: 30px;
   max-width: 1600px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.112);
 }
 .header {
   background-color: var(--clr-white);
@@ -42,7 +47,7 @@
 
 .hero {
   background-color: var(--clr-white);
-  padding-top: 30px;
+  padding-top: var(--p-section);
 }
 
 .hero__right {
@@ -171,6 +176,10 @@
   width: 100%;
 }
 
+.p-section {
+  padding-block: var(--p-section);
+}
+
 .products-page {
   padding-top: 30px;
   padding-bottom: var(--p-section);
@@ -178,6 +187,50 @@
 
 .hide {
   display: none;
+}
+
+.product__img {
+  max-width: 600px;
+}
+.product__desc {
+  max-width: 400px;
+}
+
+.cart-sidebar {
+  position: fixed;
+  z-index: 3;
+  background-color: white;
+  height: 100vh;
+  padding-block: 20px;
+  padding-inline: 10px;
+  right: 0;
+  box-shadow: -10px 0px 20px rgba(0, 0, 0, 0.192);
+  transition: transform 300ms ease-in-out;
+}
+
+.slide-in {
+  transform: translateX(0%);
+}
+.slide-out {
+  transform: translateX(110%);
+}
+
+.cart-item__img {
+  max-width: 100px;
+}
+
+.cart-items {
+  max-height: 600px;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 10px;
+  background-color: var(--clr-secondary);
+}
+
+.cart-item + .cart-item {
+  border-top: 1px solid var(--clr-primary);
+  margin-top: 10px;
+  padding-top: 10px;
 }
 
 @media screen and (max-width: 1120px) {

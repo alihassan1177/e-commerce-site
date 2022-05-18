@@ -5,7 +5,7 @@
     </div>
 </section>
 <section class="products-page">
-    <div class="container flex flex-column align-center gap-4">
+    <div class="p-section container flex flex-column align-center gap-4">
         <div class="flex align-center gap-1 flex-column">
             <h2>Products</h2>
             <p>Shop Our Best products</p>

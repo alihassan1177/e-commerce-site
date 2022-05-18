@@ -40,19 +40,18 @@ $blogs = $data['blogs'];
         </div>
         <div class="product-grid">
             <?php
-            for ($i = 0; $i < 8; $i++) {
-                echo <<<HTML
-                    <div class="product-item flex flex-column gap-1">
-                        <img src="./Assets/img/male-model.jpg">
-                        <div class="product-head flex flex-column gap-sm">
-                            <small>Category name</small>
-                            <strong class="font-body">Product Name</strong>
-                        </div>
-                        <h2>$45</h2>
-                        <a class="btn-primary-outline text-center">Add to Cart <i class="fa-solid fa-basket-shopping"></i></a>
-                        <a class="btn-primary text-center">View Product <i class="fa-solid fa-eye"></i></a>
-                    </div>
-                    HTML;
+            $products = $data["products"];
+            $Product = $data["productClass"];
+            foreach ($products as $post) {
+                $post_id = $post['id'];
+                $post_title = $post['name'];
+                $post_img = $post['img'];
+                $post_price = $post['price'];
+                $post_body = $post['body'];
+                $post_category = $post['category_id'];
+                $product_category = $Product->getProductCategory($post_category);
+                $category_name = $product_category[0]['name'];
+                include "./Views/client/inc/_product-item.php";
             }
             ?>
         </div>

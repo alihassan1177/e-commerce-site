@@ -31,4 +31,10 @@ class Product extends Model
     {
         return $this->getById($id, "categories");
     }
+
+    public function getLatestProducts()
+    {
+        $result = $this->db->query("SELECT * FROM `products` ORDER BY `id` DESC LIMIT 4");
+        return mysqli_fetch_all($result, MYSQLI_ASSOC);
+    }
 }

@@ -5,6 +5,10 @@
   font-size: var(--font-size-body-sm);
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .m-0 {
   margin: 0 !important;
 }
